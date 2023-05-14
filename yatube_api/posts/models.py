@@ -25,6 +25,9 @@ class Post(models.Model):
         blank=True, null=True,
         related_name='posts')
 
+    class Meta:
+        ordering = ['author']
+
     def __str__(self):
         return self.text[:15]
 
@@ -37,6 +40,9 @@ class Comment(models.Model):
         'Дата добавления', auto_now_add=True, db_index=True)
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name='comments')
+
+    class Meta:
+        ordering = ['-created']
 
     def __str__(self):
         return self.text[:10]
