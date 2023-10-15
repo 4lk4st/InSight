@@ -52,7 +52,7 @@ python3 manage.py migrate
 python3 manage.py runserver
 ```
 
-# ПРИМЕРЫ ЗАПРОСОВ:
+# Примеры запросов:
 
 1. Запрос на получение публикаций:
 
